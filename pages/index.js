@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Card from "../components/Card"
+import Image from "next/image"
 
 export default function Home() {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -26,9 +27,11 @@ export default function Home() {
         whileHover={{ scale: 1.1 }}
       >
         <Card onClick={cardFlipHandler}>
-          <img
+          <Image
+            height="256"
+            width="256"
             className="fluid-image rounded-corners"
-            src="image-qr-code.png"
+            src="/image-qr-code.png"
             alt="image"
           />
           <h1>Improve your front-end skills by building projects</h1>
